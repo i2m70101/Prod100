@@ -509,6 +509,26 @@
                 >official DataTables documentation</a
               >.
             </p>
+            <form action="">
+              <div>
+                <input type="text" placeholder="item" id="i" />
+                <input type="number" placeholder="Amount" />
+                <input type="date" placeholder="date" />
+                <select name="type" id="itemtype">
+                  <option value="expense">Expense</option>
+                  <option value="income">Income</option>
+                </select>
+
+                <button
+                  type="button"
+                  id="updateButton"
+                  class="btn btn-primary"
+                  onclick=""
+                >
+                  Add
+                </button>
+              </div>
+            </form>
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -525,17 +545,15 @@
                     width="100%"
                     cellspacing="0"
                   >
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </thead>
-                    
+                    <tbody>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Amount</th>
+                          <th>Date</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
                     </tbody>
                   </table>
                 </div>
@@ -550,7 +568,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
+              <span>Designed by ImX</span>
             </div>
           </div>
         </footer>
