@@ -9997,3 +9997,9 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+.entry {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
