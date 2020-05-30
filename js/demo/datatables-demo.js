@@ -10,17 +10,11 @@ function addItem() {
   let Item = {
     name: document.getElementById(inputIt).value,
     amount: document.getElementById(inpAmt).value,
-    date: document.getElementById(inpDate).value,
     type: document.getElementById(itemttype).value,
   };
 
   items.push(Item);
 }*/
-
-$("#dataTable").DataTable({
-  data: data,
-  columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
-});
 
 var data = [
   {
@@ -28,7 +22,18 @@ var data = [
     amount: "28",
     type: "Expense",
   },
+
+  {
+    name: "IM sal",
+    amount: "2500",
+    type: "Income",
+  },
 ];
+
+$("#dataTable").DataTable({
+  data: data,
+  columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
+});
 
 $("#enterItem").hide();
 $("#enterAmount").hide();
@@ -36,7 +41,6 @@ $("#enterAmount").hide();
 function butpress() {
   $("#enterItem").show();
   $("#enterAmount").show();
-  $("#pressme").text = "change now";
 }
 
 $("#enterAmount").keypress(function (e) {
