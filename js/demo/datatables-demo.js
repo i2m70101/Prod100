@@ -1,4 +1,5 @@
 // Call the dataTables jQuery plugin
+
 $(document).ready(function () {
   $("#dataTable").DataTable();
 });
@@ -15,6 +16,19 @@ function addItem() {
 
   items.push(Item);
 }*/
+
+$("#dataTable").DataTable({
+  data: data,
+  columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
+});
+
+var data = [
+  {
+    name: "Broadband",
+    amount: "28",
+    type: "Expense",
+  },
+];
 
 $("#enterItem").hide();
 $("#enterAmount").hide();
