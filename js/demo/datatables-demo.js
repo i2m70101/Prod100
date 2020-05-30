@@ -16,8 +16,14 @@ function addItem() {
   items.push(Item);
 }*/
 
-$("#enterItem").show();
-$("#enterAmount").show();
+$("#enterItem").hide();
+$("#enterAmount").hide();
+
+function butpress() {
+  $("#enterItem").show();
+  $("#enterAmount").show();
+  $("#pressme").text = "change now";
+}
 
 $("#enterAmount").keypress(function (e) {
   var mylist = [$("#enterItem").val(), $("#enterAmount").val()];
