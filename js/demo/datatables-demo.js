@@ -42,10 +42,3 @@ function butpress() {
   $("#enterItem").show();
   $("#enterAmount").show();
 }
-
-$("#enterAmount").keypress(function (e) {
-  var mylist = [$("#enterItem").val(), $("#enterAmount").val()];
-  if (e.which == 13) {
-    $("#list").prepend("<li>" + mylist + "</li>");
-  }
-});
