@@ -19,7 +19,7 @@ function butpress() {
 
 //HardCoded Data for Table
 
-var data = [
+/*
   {
     name: "Broadband",
     amount: "28",
@@ -31,7 +31,8 @@ var data = [
     amount: "2500",
     type: "Income",
   },
-];
+  */
+var data = [];
 
 $("#dataTable").DataTable({
   data: data,
@@ -52,4 +53,10 @@ function addData() {
       type: c,
     })
     .draw();
+
+  $("#enterItem").hide();
+  $("#enterAmount").hide();
+  $("#enterType").hide();
+  $("#addRec").hide();
+  $("#pressme").show();
 }
