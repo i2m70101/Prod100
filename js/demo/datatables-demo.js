@@ -20,18 +20,18 @@ function butpress() {
 //HardCoded Data for Table
 
 /*
-  {
-    name: "Broadband",
-    amount: "28",
-    type: "Expense",
-  },
+{
+  name: "Broadband",
+  amount: "28",
+  type: "Expense",
+},
 
-  {
-    name: "IM sal",
-    amount: "2500",
-    type: "Income",
-  },
-  */
+{
+  name: "IM sal",
+  amount: "2500",
+  type: "Income",
+},
+*/
 var data = [];
 
 $("#dataTable").DataTable({
@@ -52,4 +52,6 @@ function addData() {
       type: c,
     })
     .draw();
+  $("#enterItem").val("");
+  $("#enterAmount").val("");
 }

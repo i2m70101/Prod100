@@ -511,14 +511,17 @@
             </p>
             
             <div class="entry">
-                 <button id="pressme" onclick="butpress()"> Add entry </button> 
-                 <select name="type" id="enterType">
+                 <button class="btn btn-outline-primary"  id="pressme" onclick="butpress()"> Add entry </button> 
+                 <select style="border: none;" name="type" id="enterType">
                    <option value="Expense">Expense</option>
                    <option value="Income">Income</option> 
                   </select>
-               <input class="entry" type="text" name="" id="enterItem" placeholder="enter item"></i> 
-               <input type="number" class="entry" name="" id="enterAmount" placeholder="enter Amount"/>
-               <button id="addRec" onclick="addData()"> Add Record</button>
+               <input class="entry" style="border: none;" type="text" name="" id="enterItem" placeholder="enter item"></i> 
+               <input style="border: none" type="number" class="entry" name="" id="enterAmount" placeholder="enter Amount"/>
+
+                 <button style="border-radius: 12;" class="btn-primary" id="addRec" onclick="addData()"> Add Record</button>
+               
+                 
 
               
 
