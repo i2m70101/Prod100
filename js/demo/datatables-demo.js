@@ -4,18 +4,6 @@ $(document).ready(function () {
   $("#dataTable").DataTable();
 });
 
-/*let items = [];
-
-function addItem() {
-  let Item = {
-    name: document.getElementById(inputIt).value,
-    amount: document.getElementById(inpAmt).value,
-    type: document.getElementById(itemttype).value,
-  };
-
-  items.push(Item);
-}*/
-
 var data = [
   {
     name: "Broadband",
@@ -50,17 +38,28 @@ function butpress() {
 
 //Add Row
 
-var rName = document.getElementById(enterItem).value;
-var rAmount = document.getElementById(enterAmount).value;
-var rType = document.getElementById(enterType).value;
-
 function addData() {
   var table = $("#dataTable").DataTable();
+  var a = $("#enterItem").val();
+  var b = $("enterAmount").val();
+  var c = $("#enterType").val();
   table.row
     .add({
-      name: rName,
-      amount: rAmount,
-      type: rType,
+      name: a,
+      amount: b,
+      type: c,
     })
     .draw();
 }
+
+/*let items = [];
+
+function addItem() {
+  let Item = {
+    name: document.getElementById(inputIt).value,
+    amount: document.getElementById(inpAmt).value,
+    type: document.getElementById(itemttype).value,
+  };
+
+  items.push(Item);
+}*/
