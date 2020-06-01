@@ -37,8 +37,30 @@ $("#dataTable").DataTable({
 
 $("#enterItem").hide();
 $("#enterAmount").hide();
+$("#enterType").hide();
+$("#addRec").hide();
 
 function butpress() {
   $("#enterItem").show();
   $("#enterAmount").show();
+  $("#enterType").show();
+  $("#pressme").hide();
+  $("#addRec").show();
+}
+
+//Add Row
+
+var rName = document.getElementById(enterItem).value;
+var rAmount = document.getElementById(enterAmount).value;
+var rType = document.getElementById(enterType).value;
+
+function addData() {
+  var table = $("#dataTable").DataTable();
+  table.row
+    .add({
+      name: rName,
+      amount: rAmount,
+      type: rType,
+    })
+    .draw();
 }
