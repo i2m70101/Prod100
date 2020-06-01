@@ -4,6 +4,21 @@ $(document).ready(function () {
   $("#dataTable").DataTable();
 });
 
+$("#enterItem").hide();
+$("#enterAmount").hide();
+$("#enterType").hide();
+$("#addRec").hide();
+
+function butpress() {
+  $("#enterItem").show();
+  $("#enterAmount").show();
+  $("#enterType").show();
+  $("#pressme").hide();
+  $("#addRec").show();
+}
+
+//HardCoded Data for Table
+
 var data = [
   {
     name: "Broadband",
@@ -23,25 +38,12 @@ $("#dataTable").DataTable({
   columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
 });
 
-$("#enterItem").hide();
-$("#enterAmount").hide();
-$("#enterType").hide();
-$("#addRec").hide();
-
-function butpress() {
-  $("#enterItem").show();
-  $("#enterAmount").show();
-  $("#enterType").show();
-  $("#pressme").hide();
-  $("#addRec").show();
-}
-
 //Add Row
 
 function addData() {
   var table = $("#dataTable").DataTable();
   var a = $("#enterItem").val();
-  var b = $("enterAmount").val();
+  var b = $("#enterAmount").val();
   var c = $("#enterType").val();
   table.row
     .add({
@@ -51,15 +53,3 @@ function addData() {
     })
     .draw();
 }
-
-/*let items = [];
-
-function addItem() {
-  let Item = {
-    name: document.getElementById(inputIt).value,
-    amount: document.getElementById(inpAmt).value,
-    type: document.getElementById(itemttype).value,
-  };
-
-  items.push(Item);
-}*/
