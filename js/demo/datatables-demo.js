@@ -32,13 +32,11 @@ function butpress() {
     type: "Income",
   },
   */
-var data = [];
-
-$("#dataTable").DataTable({
+var data = ([a, b, c] = $("#dataTable").DataTable({
   data: data,
   columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
-});
-
+}));
+localStorage.setItem = ("data", ;
 //Add Row
 
 function addData() {
