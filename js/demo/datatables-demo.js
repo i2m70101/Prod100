@@ -1,9 +1,5 @@
 // Call the dataTables jQuery plugin
 
-$(document).ready(function () {
-  $("#dataTable").DataTable();
-});
-
 $("#enterItem").hide();
 $("#enterAmount").hide();
 $("#enterType").hide();
@@ -16,16 +12,11 @@ function butpress() {
   $("#pressme").hide();
   $("#addRec").show();
 }
-var data = [];
 
-$("#dataTable").DataTable({
-  data: data,
-  columns: [{ data: "name" }, { data: "amount" }, { data: "type" }],
-});
 //Add Row
 
 function addData() {
-  var table = $("#dataTable").DataTable();
+  var table = $("#example").DataTable();
   var a = $("#enterItem").val();
   var b = $("#enterAmount").val();
   var c = $("#enterType").val();
@@ -42,43 +33,15 @@ function addData() {
 }
 
 var dataSet = [
-  [
-    "Tiger Nixon",
-    "System Architect",
-    "Edinburgh",
-    "5421",
-    "2011/04/25",
-    "$320,800",
-  ],
-  [
-    "Ashton Cox",
-    "Junior Technical Author",
-    "San Francisco",
-    "1562",
-    "2009/01/12",
-    "$86,000",
-  ],
-  [
-    "Cedric Kelly",
-    "Senior Javascript Developer",
-    "Edinburgh",
-    "6224",
-    "2012/03/29",
-    "$433,060",
-  ],
+  ["Tiger Nixon", "2011/04/25", "$320,800"],
+  ["Ashton Cox", "2009/01/12", "$86,000"],
+  ["Cedric Kelly", "2012/03/29", "$433,060"],
 ];
 // JS Table below
 $(document).ready(function () {
   $("#example").DataTable({
     data: dataSet,
-    columns: [
-      { title: "Name" },
-      { title: "Position" },
-      { title: "Office" },
-      { title: "Extn." },
-      { title: "Start date" },
-      { title: "Salary" },
-    ],
+    columns: [{ title: "Name" }, { title: "Start date" }, { title: "Salary" }],
   });
 });
 
