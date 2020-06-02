@@ -13,36 +13,32 @@ function butpress() {
   $("#addRec").show();
 }
 
-//Add Row
-
-function addData() {
-  var table = $("#example").DataTable();
-  var a = $("#enterItem").val();
-  var b = $("#enterAmount").val();
-  var c = $("#enterType").val();
-  table.row
-    .add({
-      name: a,
-      amount: b,
-      type: c,
-    })
-    .draw();
-
-  $("#enterItem").val("");
-  $("#enterAmount").val("");
-}
-
 var dataSet = [
-  ["Tiger Nixon", "2011/04/25", "$320,800"],
-  ["Ashton Cox", "2009/01/12", "$86,000"],
-  ["Cedric Kelly", "2012/03/29", "$433,060"],
+  ["Expense", "Broadband", "28"],
+  ["Income", "IM Sal", "2500"],
+  ["Income", "Saf Sal", "2000"],
 ];
 // JS Table below
 $(document).ready(function () {
   $("#example").DataTable({
     data: dataSet,
-    columns: [{ title: "Name" }, { title: "Start date" }, { title: "Salary" }],
+    columns: [{ title: "Type" }, { title: "Name" }, { title: "Amount" }],
   });
 });
 
-localStorage.setItem("datas", JSON.stringify(dataSet));
+//Add Row to Local Storage
+function addData() {
+  var a = $("#enterType").val();
+  var b = $("#enterItem").val();
+  var c = $("#enterAmount").val();
+  var newArray = [[a, b, c]];
+
+  dataSet.push(newArray);
+
+  localStorage.setItem("datas", JSON.stringify(dataSet));
+  $("#enterItem").val("");
+  $("#enterAmount").val("");
+
+  var dataSet1 = [JSON.parse(localStorage.getItem("datas"))];
+  document.getElementById(newparsedata).value = dataSet1;
+}
