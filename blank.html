@@ -496,21 +496,28 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
           </div>
-          <p>
-
-          </p>
-          <div class="entry">
-            <input class="entry" type="text" name="" id="enterItem" placeholder="enter item"></i> 
-            <input type="number" class="entry" name="" id="enterAmount" placeholder="enter Amount"/>
-            <div>
-              <ul>
-                <li>
-                  <span id="list"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <p></p>
           <!-- /.container-fluid -->
+
+
+
+    <div class="entry">
+      <button class="btn btn-outline-primary"  id="pressme" onclick="butpress()"> Add entry </button> 
+      <select style="border: none;" name="type" id="enterType">
+        <option value="Expense">Expense</option>
+        <option value="Income">Income</option> 
+       </select>
+    <input class="entry" style="border: none;" type="text" name="" id="enterName" placeholder="enter Name"></i> 
+    <input style="border: none" type="number" class="entry" name="" id="enterAmount" placeholder="enter Amount"/>
+
+      <button style="border-radius: 12;" class="btn-primary" id="addRec" onclick="addRecord()"> Add Record</button>
+    
+      
+
+   
+ </div>
+
+ <p id="showData"></p>
         </div>
         <!-- End of Main Content -->
 
