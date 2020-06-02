@@ -50,7 +50,6 @@ var dataSet = [
     "2011/04/25",
     "$320,800",
   ],
-  ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750"],
   [
     "Ashton Cox",
     "Junior Technical Author",
@@ -82,3 +81,5 @@ $(document).ready(function () {
     ],
   });
 });
+
+localStorage.setItem("datas", JSON.stringify(dataSet));
