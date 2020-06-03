@@ -13,11 +13,16 @@ function butpress() {
   $("#addRec").show();
 }
 
-var dataSet = [
-  ["Expense", "Broadband", "28"],
+var dataSet = localStorage.getItem("datas")
+  ? JSON.parse(localStorage.getItem("datas"))
+  : [];
+/*
+localStorage.setItem("datas", JSON.stringify(dataSet));
+  [
+["Expense", "Broadband", "28"],
   ["Income", "IM Sal", "2500"],
   ["Income", "Saf Sal", "2000"],
-];
+];*/
 // JS Table below
 $(document).ready(function () {
   $("#example").DataTable({
@@ -39,6 +44,6 @@ function addData() {
   $("#enterItem").val("");
   $("#enterAmount").val("");
 
-  var dataSet1 = [JSON.parse(localStorage.getItem("datas"))];
-  document.getElementById(newparsedata).value = dataSet1;
+  //var dataSet1 = [JSON.parse(localStorage.getItem("datas"))];
+  //document.getElementById(newparsedata).value = dataSet1;
 }
